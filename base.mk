@@ -26,6 +26,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 	ro.build.version.security_patch=$(PLATFORM_SECURITY_PATCH) \
 	ro.adb.secure=0
 
+#Huawei HiSuite (also other OEM custom programs I guess) it's of no use in AOSP builds
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+	persist.sys.usb.config=adb
+
 #VNDK config files
 PRODUCT_COPY_FILES += \
 	device/phh/treble/vndk-detect:system/bin/vndk-detect \
